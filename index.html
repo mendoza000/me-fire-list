@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Firebase-Crud</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+</head>
+<body>
+	<h1 class="text-center m-4">Fire-list</h1>
+
+
+	<div class="container p-4 m-auto">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="card">
+					<div class="card-body">
+						<form id="task-form" class="text-center">
+							<div class="form-group">
+								<input type="text" id="task-title" class="form-control" placeholder="Titulo de la tarea">
+							</div>
+							<div class="form-group">
+								<textarea id="task-description" rows="4" placeholder="Descripcion de la tarea" class="form-control"></textarea>
+							</div>
+							<button class="btn btn-primary" id="btn-task-form">Guardar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-7" id="task-container"></div>
+		</div>
+	</div>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBRARF3ChsOwyEaEOqYO0groxEoWPB1Hq4",
+    authDomain: "fire-crud-b0a7c.firebaseapp.com",
+    projectId: "fire-crud-b0a7c",
+    storageBucket: "fire-crud-b0a7c.appspot.com",
+    messagingSenderId: "901412398774",
+    appId: "1:901412398774:web:dda82be35ea52a33aca817",
+    measurementId: "G-YBQ2ZT8KG2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+	<script src="index.js"></script>
+</body>
+</html>
